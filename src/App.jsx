@@ -3,7 +3,8 @@ import React from "react";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Cases from "./pages/Cases";
-import Certification from "./pages/certification";
+/* import Certification from "./pages/certification"; */
+import Certification from './pages/Certification';
 import Achievements from "./pages/Achievements";
 import Enquiry from "./pages/Enquiry";
 import Navbar from "./component/Navbar";
