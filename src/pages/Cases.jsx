@@ -1,98 +1,126 @@
-import React, { useEffect, useState } from "react";
-import { FaAward } from "react-icons/fa";
-import { IoIosArrowRoundBack } from "react-icons/io";
-import { IoIosArrowRoundForward } from "react-icons/io";
+import React, { useEffect, useRef, useState } from "react";
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
 const Cases = () => {
+ 
   const [current, setCurrent] = useState(0);
+  const containerRef = useRef(null);
+const [cardWidth, setCardWidth] = useState(350);
 
-  const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % imageData.length);
-  };
-
-  const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? imageData.length - 1 : prev - 1));
-  };
-
-  const achievements = [
-    {
-      title: "Fellowship In Implantology",
-      desc: "International Congress Of Oral Implantologists (ICOI)",
-    },
-    {
-      title: "BPS Certified Dentist",
-      desc: "Trained in Liechtenstein, Switzerland",
-    },
-    {
-      title: "Research Contributions",
-      desc: "15 Articles Authored, 4 Published",
-    },
-    {
-      title: "Scientific Presentation Awards",
-      desc: "Showcase & Star Summit (2017–2018)",
-    },
-  ];
-
-  const imageData = [
-    {
+const imageData = [
+  {
       id: 1,
-      name: "Ceramic Veneer Treatment",
-      icon: <img src="/assets/before2.jpeg" />,
+      name: "Complete Dentures",
+      icon: <img src="/assets/Complete Dentures 01.png" />,
     },
-
     {
       id: 2,
-      name: "Ceramic Veneer Treatment",
-      icon: <img src="/assets/before4.jpeg" />,
+      name: "Complete Dentures",
+      icon: <img src="/assets/Complete Dentures 02.png" />,
     },
     {
       id: 3,
-      name: "Ceramic Veneer Treatment",
-      icon: <img src="/assets/before5.jpeg" />,
+      name: "Complete Dentures",
+      icon: <img src="/assets/Complete Dentures 03.png" />,
     },
     {
       id: 4,
-      name: "Ceramic Veneer Treatment",
-      icon: <img src="/assets/before6.jpeg" />,
+      name: "Full Mouth Rehabilitation",
+      icon: <img src="/assets/Mouth Rehabilitation_01.png" />,
     },
+
     {
       id: 5,
-      name: "Ceramic Veneer Treatment",
-      icon: <img src="/assets/before8.jpeg" />,
+      name: "Full Mouth Rehabilitation",
+      icon: <img src="/assets/Mouth Rehabilitation_02.png" />,
     },
     {
       id: 6,
-      name: "Ceramic Veneer Treatment",
-      icon: <img src="/assets/before9.jpeg" />,
+      name: "Full Mouth Rehabilitation",
+      icon: <img src="/assets/Mouth Rehabilitation_03.png" />,
     },
     {
       id: 7,
-      name: "Ceramic Veneer Treatment",
-      icon: <img src="/assets/before10.jpeg" />,
+      name: "Full Mouth Rehabilitation",
+      icon: <img src="/assets/Mouth Rehabilitation_04.png" />,
     },
+    {
+      id: 8,
+      name: "Full Mouth Rehabilitation",
+      icon: <img src="/assets/Mouth Rehabilitation_05.png" />,
+    },
+    {
+      id: 9,
+      name: "Full Mouth Rehabilitation",
+      icon: <img src="/assets/Mouth Rehabilitation_06.png" />,
+    },
+    {
+      id: 10,
+      name: "Full Mouth Rehabilitation",
+      icon: <img src="/assets/Mouth Rehabilitation_07.png" />,
+    },
+     {
+      id: 11,
+      name: "Fixed Partial Denture",
+      icon: <img src="/assets/te1.jpeg" />,
+    },
+     {
+      id: 12,
+      name: "Fixed Partial Denture",
+      icon: <img src="/assets/te3 (2).jpeg" />,
+    },
+     {
+      id: 13,
+      name: "Fixed Partial Denture",
+      icon: <img src="/assets/Mouth Rehabilitation_07.png" />,
+    },
+     {
+      id: 14,
+      name: "Fixed Partial Denture",
+      icon: <img src="/assets/te3 (1).jpeg" />,
+    },
+     {
+      id: 15,
+      name: "Fixed Partial Denture",
+      icon: <img src="/assets/te4.jpeg" />,
+    },
+    
   ];
 
-  const cardWidth = 350;
+
+
+ 
   const gap = 20;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % imageData.length);
-    }, 1000); // change slide every 3 seconds
-    return () => clearInterval(interval);
-  }, [imageData.length]);
+  
+  const interval = 3000;
+
+ 
+ 
+
+  // Get card width dynamically
+ 
+const nextSlide = () => {
+  setCurrent((prev) => (prev + 1) % imageData.length);
+};
+
+const prevSlide = () => {
+  setCurrent((prev) =>
+    prev === 0 ? imageData.length - 1 : prev - 1
+  );
+};
 
   return (
-    <div className="bg-[#faf9f4] px-4 sm:px-10 md:px-24 mt-16">
-      {/* Cases Title */}
-      <div className="mt-16 flex justify-center">
-        <h1 className="text-[32px] sm:text-[42px] font-bold text-center">
-          Cases (Before & After)
-        </h1>
-      </div>
+    <div className=" p-4 md:p-20">
+      {/* Title */}
+     
 
-      {/* Carousel */}
-      <div className="w-full flex flex-col items-center mt-10">
+      {/* Slider */}
+    <div className="w-full flex flex-col items-center md:mt-5">
+       <h1 className="text-center text-[28px] md:text-[40px] font-bold font-aileron">
+        Cases (Before & After)
+      </h1>
+  <div className="w-full flex flex-col items-center md:mt-10">
         <div className="overflow-hidden w-full">
           <div
             className="flex gap-5 transition-transform duration-700 ease-in-out"
@@ -107,11 +135,11 @@ const Cases = () => {
               return (
                 <div
                   key={index}
-                  className={`w-[250px] sm:w-[300px] md:w-[350px] h-[250px] sm:h-[300px] md:h-[330px] rounded-xl overflow-hidden shadow bg-white p-3 flex flex-col flex-shrink-0
+                  className={`w-[250px] sm:w-[300px] md:w-[350px] h-[250px] sm:h-[300px] md:h-[330px] rounded-xl overflow-hidden shadow bg-white p-1 md:p-3 flex flex-col flex-shrink-0
                     ${
                       isFourth
-                        ? "filter blur-sm scale-95 opacity-70"
-                        : "scale-100 opacity-100"
+                        ? ""
+                        : ""
                     }
                   `}
                 >
@@ -157,238 +185,237 @@ const Cases = () => {
           </button>
         </div>
       </div>
+</div>
 
-      {/* Testimonials Title */}
-      <div className="flex justify-center mt-10">
-        <h1 className="text-[32px] sm:text-[42px] font-bold text-center">
-          Testimonials
-        </h1>
+
+      {/* Testimonials */}
+      <h1 className="text-[32px] sm:text-[42px] font-bold text-center mt-10">
+        Testimonials
+      </h1>
+
+     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+
+  {/* CARD */}
+ <div className="
+  bg-white p-6 rounded-2xl shadow-lg border border-gray-100 
+  h-full flex flex-col justify-between
+
+  transition-all duration-300 
+  hover:-translate-y-2 hover:shadow-2xl hover:scale-[1.02] hover:border-gray-200 hover:cursor-pointer
+
+  active:scale-[0.98] active:shadow-xl active:border-gray-200
+">
+  <div>
+    <div className="flex gap-1 mb-3">
+      <img src="/assets/start.svg" className="w-6 h-6" />
+      <img src="/assets/start.svg" className="w-6 h-6" />
+      <img src="/assets/start.svg" className="w-6 h-6" />
+      <img src="/assets/start.svg" className="w-6 h-6" />
+      <img src="/assets/start.svg" className="w-6 h-6" />
+    </div>
+
+    <p className="text-[15px] text-[#555] leading-relaxed italic">
+      "I have taken treatment from Dr Asvini in Saveetha dental college,
+      when I came I couldn't eat properly, after treatment I am able to
+      eat well. The work she had done is good and very comfortable. I am
+      able to smile again with confidence. The doctor did a very good job."
+    </p>
+  </div>
+
+  <div>
+    <div className="w-full h-[1px] bg-gray-200 my-4"></div>
+    <div className="flex items-center gap-3">
+      <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
+        <img src="/assets/GIRL (1).svg" className="w-full h-full object-cover" />
       </div>
 
-      {/* Testimonials Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 mt-5">
-        <div
-          className="bg-white p-5 rounded-3xl shadow font-medium inter 
-  transition-all duration-300 hover:scale-[1.03] hover:shadow-xl"
-        >
-          <div className="flex gap-2 mt-3">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="w-5 h-5">
-                <img
-                  src="/assets/start.svg"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            ))}
-          </div>
+      <h3 className="text-[16px] font-semibold text-[#1A2B3B]">
+        MRS SUBAIDHA PARVEEN
+      </h3>
+    </div>
+  </div>
+</div>
 
-          <p className="mt-3 text-[15px] text-[#697586]">
-            “I have taken treatment from Dr Asvini in Saveetha Dental College.
-            When I came I couldn’t eat properly; after treatment I am able to
-            eat well. The work she had done is good and very comfortable. I am
-            able to smile again with confidence. The doctor did a good job.”
-          </p>
 
-          <div className="flex mt-5 gap-3">
-            <img
-              src="/assets/image.png"
-              className="w-[50px] h-[50px] rounded-full object-cover"
-            />
+  
+  <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 
+  h-full flex flex-col justify-between
 
-            <div className="flex flex-col">
-              <span className="text-[16px] font-semibold">Orlando Diggs</span>
-              <p className="text-[15px] text-gray-600">
-                Position, Company name
-              </p>
-            </div>
-          </div>
-        </div>
+  transition-all duration-300 
+  hover:-translate-y-2 hover:shadow-2xl hover:scale-[1.02] hover:border-gray-200 hover:cursor-pointer
 
-        <div
-          className="bg-white p-5 rounded-3xl shadow font-medium inter 
-  transition-all duration-300 hover:scale-[1.03] hover:shadow-xl"
-        >
-          <div className="flex gap-2 mt-3">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="w-5 h-5">
-                <img
-                  src="/assets/start.svg"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-3 text-[15px] text-[#697586]">
-            “I have taken treatment from Dr Asvini in Saveetha Dental College.
-            When I came I couldn’t eat properly; after treatment I am able to
-            eat well. The work she had done is good and very comfortable. I am
-            able to smile again with confidence. The doctor did a good job.”
-          </p>
-
-          <div className="flex mt-5 gap-3">
-            <img
-              src="/assets/image.png"
-              className="w-[50px] h-[50px] rounded-full object-cover"
-            />
-
-            <div className="flex flex-col">
-              <span className="text-[16px] font-semibold">Orlando Diggs</span>
-              <p className="text-[15px] text-gray-600">
-                Position, Company name
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="bg-white p-5 rounded-3xl shadow font-medium inter 
-  transition-all duration-300 hover:scale-[1.03] hover:shadow-xl"
-        >
-          <div className="flex gap-2 mt-3">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="w-5 h-5">
-                <img
-                  src="/assets/start.svg"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-3 text-[15px] text-[#697586]">
-            “I have taken treatment from Dr Asvini in Saveetha Dental College.
-            When I came I couldn’t eat properly; after treatment I am able to
-            eat well. The work she had done is good and very comfortable. I am
-            able to smile again with confidence. The doctor did a good job.”
-          </p>
-
-          <div className="flex mt-5 gap-3">
-            <img
-              src="/assets/image.png"
-              className="w-[50px] h-[50px] rounded-full object-cover"
-            />
-
-            <div className="flex flex-col">
-              <span className="text-[16px] font-semibold">Orlando Diggs</span>
-              <p className="text-[15px] text-gray-600">
-                Position, Company name
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="bg-white p-5 rounded-3xl shadow font-medium inter 
-  transition-all duration-300 hover:scale-[1.03] hover:shadow-xl"
-        >
-          <div className="flex gap-2 mt-3">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="w-5 h-5">
-                <img
-                  src="/assets/start.svg"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-3 text-[15px] text-[#697586]">
-            “I have taken treatment from Dr Asvini in Saveetha Dental College.
-            When I came I couldn’t eat properly; after treatment I am able to
-            eat well. The work she had done is good and very comfortable. I am
-            able to smile again with confidence. The doctor did a good job.”
-          </p>
-
-          <div className="flex mt-5 gap-3">
-            <img
-              src="/assets/image.png"
-              className="w-[50px] h-[50px] rounded-full object-cover"
-            />
-
-            <div className="flex flex-col">
-              <span className="text-[16px] font-semibold">Orlando Diggs</span>
-              <p className="text-[15px] text-gray-600">
-                Position, Company name
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="bg-white p-5 rounded-3xl shadow font-medium inter 
-  transition-all duration-300 hover:scale-[1.03] hover:shadow-xl"
-        >
-          <div className="flex gap-2 mt-3">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="w-5 h-5">
-                <img
-                  src="/assets/start.svg"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-3 text-[15px] text-[#697586]">
-            “I have taken treatment from Dr Asvini in Saveetha Dental College.
-            When I came I couldn’t eat properly; after treatment I am able to
-            eat well. The work she had done is good and very comfortable. I am
-            able to smile again with confidence. The doctor did a good job.”
-          </p>
-
-          <div className="flex mt-5 gap-3">
-            <img
-              src="/assets/image.png"
-              className="w-[50px] h-[50px] rounded-full object-cover"
-            />
-
-            <div className="flex flex-col">
-              <span className="text-[16px] font-semibold">Orlando Diggs</span>
-              <p className="text-[15px] text-gray-600">
-                Position, Company name
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className="bg-white p-5 rounded-3xl shadow font-medium inter 
-  transition-all duration-300 hover:scale-[1.03] hover:shadow-xl"
-        >
-          <div className="flex gap-2 mt-3">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="w-5 h-5">
-                <img
-                  src="/assets/start.svg"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-3 text-[15px] text-[#697586]">
-            “I have taken treatment from Dr Asvini in Saveetha Dental College.
-            When I came I couldn’t eat properly; after treatment I am able to
-            eat well. The work she had done is good and very comfortable. I am
-            able to smile again with confidence. The doctor did a good job.”
-          </p>
-
-          <div className="flex mt-5 gap-3">
-            <img
-              src="/assets/image.png"
-              className="w-[50px] h-[50px] rounded-full object-cover"
-            />
-
-            <div className="flex flex-col">
-              <span className="text-[16px] font-semibold">Orlando Diggs</span>
-              <p className="text-[15px] text-gray-600">
-                Position, Company name
-              </p>
-            </div>
-          </div>
-        </div>
+  active:scale-[0.98] active:shadow-xl active:border-gray-200">
+    <div>
+      <div className="flex gap-1 mb-3">
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
       </div>
+
+      <p className="text-[15px] text-[#555] leading-relaxed italic">
+       "I'm very happy to share my feedback for the treatment you provided. You handled everything with great patience and care, the way you treated me was very gentle and comforting. I truly appreciate your soft approach and the time you took to explain things clearly"
+
+      </p>
+    </div>
+
+    <div>
+      <div className="w-full h-[1px] bg-gray-200 my-4"></div>
+      <div className="flex items-center gap-3">
+        <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
+          <img src="/assets/BOY.svg" className="w-full h-full object-cover" />
+        </div>
+
+        <h3 className="text-[16px] font-semibold text-[#1A2B3B]">
+          MR PANDURANGA RAO
+        </h3>
+      </div>
+    </div>
+  </div>
+
+   <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 
+  h-full flex flex-col justify-between
+
+  transition-all duration-300 
+  hover:-translate-y-2 hover:shadow-2xl hover:scale-[1.02] hover:border-gray-200 hover:cursor-pointer
+
+  active:scale-[0.98] active:shadow-xl active:border-gray-200">
+    <div>
+      <div className="flex gap-1 mb-3">
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+      </div>
+
+      <p className="text-[15px] text-[#555] leading-relaxed italic">
+       "I appreciate the exceptional care and great experience I received under the guidance of Dr Asvini at Saveetha dental college. The treatment was not only smooth and comfortable but also delivered a level of satisfaction that speaks to your deep expertise in prosthodontics. I genuinely felt supported throughout the process, and your clarity in communication made all the difference. Thank you for creating a trust-driven, results-oriented treatment journey. Hope you treat all the patients with the same enthusiasm and ethics in future. All the best."
+      </p>
+    </div>
+
+    <div>
+      <div className="w-full h-[1px] bg-gray-200 my-4"></div>
+      <div className="flex items-center gap-3">
+        <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
+          <img src="/assets/BOY.svg" className="w-full h-full object-cover" />
+        </div>
+
+        <h3 className="text-[16px] font-semibold text-[#1A2B3B]">
+        MR NOBULLA SHERIFF
+        </h3>
+      </div>
+    </div>
+  </div>
+
+   <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 
+  h-full flex flex-col justify-between
+
+  transition-all duration-300 
+  hover:-translate-y-2 hover:shadow-2xl hover:scale-[1.02] hover:border-gray-200 hover:cursor-pointer
+
+  active:scale-[0.98] active:shadow-xl active:border-gray-200">
+    <div>
+      <div className="flex gap-1 mb-3">
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+      </div>
+
+      <p className="text-[15px] text-[#555] leading-relaxed italic">
+       "My name is Fouzia Banu I had multiple issue with my teeth I had broken teeth also but after treatment It feels natural the whole treatment was satisfying and I got my smile restored now I am smiling confidently, my Dr Asvini devi mam is very caring of me, the professional and friendly demeanor and very comfortable a big thank you for Dr.Asvini Devi mam"
+      </p>
+    </div>
+
+    <div>
+      <div className="w-full h-[1px] bg-gray-200 my-4"></div>
+      <div className="flex items-center gap-3">
+        <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
+          <img src="/assets/GIRL (1).svg" className="w-full h-full object-cover" />
+        </div>
+
+        <h3 className="text-[16px] font-semibold text-[#1A2B3B]">
+        MRS FOUZIA BANU
+        </h3>
+      </div>
+    </div>
+  </div>
+
+   <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 
+  h-full flex flex-col justify-between
+
+  transition-all duration-300 
+  hover:-translate-y-2 hover:shadow-2xl hover:scale-[1.02] hover:border-gray-200 hover:cursor-pointer
+
+  active:scale-[0.98] active:shadow-xl active:border-gray-200">
+    <div>
+      <div className="flex gap-1 mb-3">
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+      </div>
+
+      <p className="text-[15px] text-[#555] leading-relaxed italic">
+       "Before Treatment: I had severe difficulty chewing and felt embarrassed to smile due to a missing tooth.After Treatment:The dental team, especially Dr Asvini who handled my case, did an amazing job with my tooth. The process was smooth, painless, and affordable. My smile has completely changed, and so my confidence. Truly grateful!"
+      </p>
+    </div>
+
+    <div>
+      <div className="w-full h-[1px] bg-gray-200 my-4"></div>
+      <div className="flex items-center gap-3">
+        <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
+          <img src="/assets/BOY.svg" className="w-full h-full object-cover" />
+        </div>
+
+        <h3 className="text-[16px] font-semibold text-[#1A2B3B]">
+          MR SALMAN SAYER
+        </h3>
+      </div>
+    </div>
+  </div>
+
+   <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 
+  h-full flex flex-col justify-between
+
+  transition-all duration-300 
+  hover:-translate-y-2 hover:shadow-2xl hover:scale-[1.02] hover:border-gray-200 hover:cursor-pointer
+
+  active:scale-[0.98] active:shadow-xl active:border-gray-200">
+    <div>
+      <div className="flex gap-1 mb-3">
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+        <img src="/assets/start.svg" className="w-6 h-6" />
+      </div>
+
+      <p className="text-[15px] text-[#555] leading-relaxed italic">
+        "I came to Saveetha for tooth replacement but Dr Asvini explained the importance of treating other issues along with it. She was very patient and gentle, I had no pain during treatment and she never made me wait for any treatment and was punctual. Now I am feeling very confident about my smile and I am able to be healthy by eating all food. Very grateful for her to be my dentist"
+      </p>
+    </div>
+
+    <div>
+      <div className="w-full h-[1px] bg-gray-200 my-4"></div>
+      <div className="flex items-center gap-3">
+        <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
+          <img src="/assets/BOY.svg" className="w-full h-full object-cover" />
+        </div>
+
+        <h3 className="text-[16px] font-semibold text-[#1A2B3B]">
+         MRS SIVARHUSHANAM
+        </h3>
+      </div>
+    </div>
+  </div>
+
+</div>
+
     </div>
   );
 };

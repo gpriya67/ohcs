@@ -22,7 +22,9 @@ const Achievements = () => {
   ];
 
   return (
-    <div className="w-full bg-[#f8f8f2] py-16 px-6 sm:px-10 md:px-16 lg:px-24 xl:px-40">
+    <div className=" flex justify-center items-center mt-5 rounded-2xl">
+      <div className="  max-w-[1300px] flex justify-center items-center rounded-md">
+    <div className="w-full bg-[#f8f8f2] py-16 px-4 md:px-20 rounded-md">
       
       {/* TITLE */}
       <div className="flex justify-center">
@@ -32,7 +34,7 @@ const Achievements = () => {
       </div>
 
       {/* GRID */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 max-w-[1200px] mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 max-w-[1200px] mx-auto">
         {achievements.map((item, i) => (
           <div
             key={i}
@@ -57,6 +59,8 @@ const Achievements = () => {
         ))}
       </div>
 
+    </div>
+    </div>
     </div>
   );
 };

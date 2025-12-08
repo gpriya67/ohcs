@@ -6,12 +6,20 @@
   font-style: normal;
 }
 
-.inter-m{
+/* .inter-m{
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: medium;
+} */
+
+.inter-m {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;   
+  font-style: normal; 
 }
+
 
 
 
@@ -61,6 +69,20 @@
   src: url("/font/aileron/Aileron-Regular.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
+}
+
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 

@@ -1,0 +1,55 @@
+/* Inter Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap');
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-m {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Aileron Fonts */
+@font-face {
+  font-family: "Aileron";
+  src: url("./font/aileron/Aileron-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("./font/aileron/Aileron-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("./font/aileron/Aileron-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("./font/aileron/Aileron-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Aileron";
+  src: url("./font/aileron/Aileron-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Optional: scroll smooth */
+html {
+  scroll-behavior: smooth;
+}

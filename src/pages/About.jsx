@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="relative bg-[#BDD8D1] rounded-2xl w-full max-w-[1440px] mx-auto overflow-hidden py-14 px-4 md:px-20">
+    <div className="relative bg-[#BDD8D1] rounded-2xl w-full   mx-auto overflow-hidden p-4 md:p-20 md:px-30">
 
       {/* About Title */}
       <h1 className="text-center text-[28px] md:text-[40px] font-bold font-aileron">
@@ -10,12 +10,12 @@ const About = () => {
       </h1>
 
       {/* Subtext */}
-      <p className="text-center text-[16px] md:text-[22px] text-[#747474] font-aileron mt-2">
+      <p className="text-center text-[16px] md:text-[22px] text-[#747474] font-aileron mt-5">
         To restore a smile is to restore a part of someone’s life.
       </p>
 
       {/* TOP SECTION */}
-      <div className="flex flex-col md:flex-row justify-center gap-5 mt-10 relative z-10">
+      <div className="flex flex-col md:flex-row justify-between gap-5 mt-10 relative z-10">
 
         {/* Left Image */}
         <div className="w-full md:w-[340px] h-auto flex justify-center items-center">
@@ -26,7 +26,7 @@ const About = () => {
         </div>
 
         {/* Right Text */}
-        <div className="w-full md:w-[780px] bg-white/40 backdrop-blur-lg border border-white/20 rounded-2xl p-4 md:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+        <div className="w-full md:w-[780px]  border border-white/20 rounded-2xl p-4 md:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
           <p className="font-aileron text-[16px] md:text-[24px] text-secondary leading-relaxed">
             My journey in dentistry began at 
             <b> Meenakshi Ammal Dental College (2010–2015)</b>, where I learned
@@ -41,10 +41,10 @@ const About = () => {
       </div>
 
       {/* SECOND ROW – GLASS CARDS */}
-      <div className="flex flex-col md:flex-row justify-center gap-5 mt-10 relative z-10">
+      <div className="flex flex-col md:flex-row justify-between gap-5 mt-10 relative z-10">
 
         {/* Left Glass Card */}
-        <div className="w-full md:w-[600px] bg-white/40 backdrop-blur-lg border border-white/20 rounded-2xl p-4 md:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+        <div className="w-full md:w-[600px]  border border-white/20 rounded-2xl p-4 md:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
           <p className="font-aileron text-[16px] md:text-[22px] text-secondary leading-relaxed">
             The artistry of prosthetics, full-mouth rehabilitation, and dentures 
             continues to inspire my passion for creating 
@@ -53,7 +53,7 @@ const About = () => {
         </div>
 
         {/* Right Glass Card */}
-        <div className="w-full md:w-[600px] bg-white/40 backdrop-blur-lg border border-white/20 rounded-2xl p-4 md:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+        <div className="w-full md:w-[600px]  border border-white/20 rounded-2xl p-4 md:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
           <p className="font-aileron text-[16px] md:text-[22px] text-secondary leading-relaxed">
             I am currently advancing my <b>prosthodontic expertise</b> at 
             Saveetha Dental College, Chennai, committed to combining scientific 
