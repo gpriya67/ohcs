@@ -56,7 +56,7 @@ const Navbar = () => {
               offset={-70}
               onSetActive={() => setActive("enquiry")}
             >
-              <button className="bg-white text-primary px-6 py-2 cursor-pointer rounded-md font-aileron font-medium hover:bg-gray-100 transition">
+              <button className="bg-white text-primary px-6 py-2 cursor-pointer rounded-md font-aileron font-medium hover:bg-gray-100 transition border-b-2 shadow">
                 <span>For Enquiry</span>
               </button>
             </Link>

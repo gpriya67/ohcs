@@ -43,12 +43,11 @@ const App = () => {
 
       <Footer />
       <Toaster
-  position="top-right"
-  toastOptions={{
-    duration: 1000,
-  }}
-/>
-
+        position="top-right"
+        toastOptions={{
+          duration: 1000,
+        }}
+      />
     </div>
   );
 };

@@ -10,7 +10,7 @@ const About = () => {
       </h1>
 
       {/* Subtext */}
-      <p className="text-center text-[16px] md:text-[22px] text-[#747474] font-aileron mt-5">
+      <p className="text-center text-[16px] md:text-[22px] text-[#747474] font-aileron font-medium mt-5">
         To restore a smile is to restore a part of someone’s life.
       </p>
 
@@ -27,7 +27,7 @@ const About = () => {
 
         {/* Right Text */}
         <div className="w-full md:w-[780px]  border border-white/20 rounded-2xl p-4 md:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-          <p className="font-aileron text-[16px] md:text-[24px] text-secondary leading-relaxed">
+          <p className="font-aileron text-[16px] md:text-[24px] text-secondary leading-relaxed font-medium">
             My journey in dentistry began at 
             <b> Meenakshi Ammal Dental College (2010–2015)</b>, where I learned
             how compassionate care and precise craftsmanship can truly change lives.
@@ -45,7 +45,7 @@ const About = () => {
 
         {/* Left Glass Card */}
         <div className="w-full md:w-[600px]  border border-white/20 rounded-2xl p-4 md:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-          <p className="font-aileron text-[16px] md:text-[22px] text-secondary leading-relaxed">
+          <p className="font-aileron text-[16px] md:text-[22px] text-secondary leading-relaxed font-aileron font-medium">
             The artistry of prosthetics, full-mouth rehabilitation, and dentures 
             continues to inspire my passion for creating 
             <b> life-changing, aesthetic, and functional transformations.</b>
@@ -54,7 +54,7 @@ const About = () => {
 
         {/* Right Glass Card */}
         <div className="w-full md:w-[600px]  border border-white/20 rounded-2xl p-4 md:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-          <p className="font-aileron text-[16px] md:text-[22px] text-secondary leading-relaxed">
+          <p className="font-aileron text-[16px] md:text-[22px] text-secondary leading-relaxed font-aileron font-medium">
             I am currently advancing my <b>prosthodontic expertise</b> at 
             Saveetha Dental College, Chennai, committed to combining scientific 
             excellence with empathy in every patient interaction.

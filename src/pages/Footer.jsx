@@ -6,13 +6,16 @@ const Footer = () => {
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-20 flex flex-col md:flex-row justify-between items-center gap-4">
         
         {/* Left Section */}
-        <p className="text-[13px] sm:text-[14px] text-gray-600 inter text-center md:text-left">
+        <p className="text-[13px] font-medium inter-m  sm:text-[14px] text-gray-600 inter text-center md:text-left">
           © 2025 Dr V.N.Asvini Devi. All Rights Reserved.
         </p>
 
         {/* Right Section */}
-        <p className="text-[13px] sm:text-[14px] text-gray-600 font-aileron flex items-center justify-center md:justify-end gap-1">
-          Designed with ❤️ 
+        <p className="text-[13px] sm:text-[14px] text-gray-600 inter-m  font-medium flex items-center justify-center md:justify-end gap-1">
+          Designed with 
+         <div className=" w-3 h-3">
+             <img src="/assets/BRAND SPARK HEARD.svg" className=" w-full h-auto object-cover"/>
+         </div>
           <a
             href="https://brandspark.in/"
             target="_blank"

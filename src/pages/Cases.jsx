@@ -214,7 +214,7 @@ const prevSlide = () => {
       <img src="/assets/start.svg" className="w-6 h-6" />
     </div>
 
-    <p className="text-[15px] text-[#555] leading-relaxed italic">
+    <p className="text-[15px] text-[#555] leading-relaxed italic font-aileron font-medium">
       "I have taken treatment from Dr Asvini in Saveetha dental college,
       when I came I couldn't eat properly, after treatment I am able to
       eat well. The work she had done is good and very comfortable. I am
@@ -229,7 +229,7 @@ const prevSlide = () => {
         <img src="/assets/GIRL (1).svg" className="w-full h-full object-cover" />
       </div>
 
-      <h3 className="text-[16px] font-semibold text-[#1A2B3B]">
+      <h3 className="text-[16px] font-semibold text-[#1A2B3B] font-aileron ">
         MRS SUBAIDHA PARVEEN
       </h3>
     </div>
@@ -254,7 +254,7 @@ const prevSlide = () => {
         <img src="/assets/start.svg" className="w-6 h-6" />
       </div>
 
-      <p className="text-[15px] text-[#555] leading-relaxed italic">
+      <p className="text-[15px] text-[#555] leading-relaxed italic font-aileron font-medium">
        "I'm very happy to share my feedback for the treatment you provided. You handled everything with great patience and care, the way you treated me was very gentle and comforting. I truly appreciate your soft approach and the time you took to explain things clearly"
 
       </p>
@@ -267,7 +267,7 @@ const prevSlide = () => {
           <img src="/assets/BOY.svg" className="w-full h-full object-cover" />
         </div>
 
-        <h3 className="text-[16px] font-semibold text-[#1A2B3B]">
+        <h3 className="text-[16px] font-semibold text-[#1A2B3B] font-aileron ">
           MR PANDURANGA RAO
         </h3>
       </div>
@@ -290,7 +290,7 @@ const prevSlide = () => {
         <img src="/assets/start.svg" className="w-6 h-6" />
       </div>
 
-      <p className="text-[15px] text-[#555] leading-relaxed italic">
+      <p className="text-[15px] text-[#555] leading-relaxed italic font-aileron font-medium">
        "I appreciate the exceptional care and great experience I received under the guidance of Dr Asvini at Saveetha dental college. The treatment was not only smooth and comfortable but also delivered a level of satisfaction that speaks to your deep expertise in prosthodontics. I genuinely felt supported throughout the process, and your clarity in communication made all the difference. Thank you for creating a trust-driven, results-oriented treatment journey. Hope you treat all the patients with the same enthusiasm and ethics in future. All the best."
       </p>
     </div>
@@ -302,7 +302,7 @@ const prevSlide = () => {
           <img src="/assets/BOY.svg" className="w-full h-full object-cover" />
         </div>
 
-        <h3 className="text-[16px] font-semibold text-[#1A2B3B]">
+        <h3 className="text-[16px] font-semibold text-[#1A2B3B] font-aileron ">
         MR NOBULLA SHERIFF
         </h3>
       </div>
@@ -325,7 +325,7 @@ const prevSlide = () => {
         <img src="/assets/start.svg" className="w-6 h-6" />
       </div>
 
-      <p className="text-[15px] text-[#555] leading-relaxed italic">
+      <p className="text-[15px] text-[#555] leading-relaxed italic font-aileron font-medium">
        "My name is Fouzia Banu I had multiple issue with my teeth I had broken teeth also but after treatment It feels natural the whole treatment was satisfying and I got my smile restored now I am smiling confidently, my Dr Asvini devi mam is very caring of me, the professional and friendly demeanor and very comfortable a big thank you for Dr.Asvini Devi mam"
       </p>
     </div>
@@ -337,7 +337,7 @@ const prevSlide = () => {
           <img src="/assets/GIRL (1).svg" className="w-full h-full object-cover" />
         </div>
 
-        <h3 className="text-[16px] font-semibold text-[#1A2B3B]">
+        <h3 className="text-[16px] font-semibold text-[#1A2B3B] font-aileron ">
         MRS FOUZIA BANU
         </h3>
       </div>
@@ -360,7 +360,7 @@ const prevSlide = () => {
         <img src="/assets/start.svg" className="w-6 h-6" />
       </div>
 
-      <p className="text-[15px] text-[#555] leading-relaxed italic">
+      <p className="text-[15px] text-[#555] leading-relaxed italic font-aileron font-medium">
        "Before Treatment: I had severe difficulty chewing and felt embarrassed to smile due to a missing tooth.After Treatment:The dental team, especially Dr Asvini who handled my case, did an amazing job with my tooth. The process was smooth, painless, and affordable. My smile has completely changed, and so my confidence. Truly grateful!"
       </p>
     </div>
@@ -372,7 +372,7 @@ const prevSlide = () => {
           <img src="/assets/BOY.svg" className="w-full h-full object-cover" />
         </div>
 
-        <h3 className="text-[16px] font-semibold text-[#1A2B3B]">
+        <h3 className="text-[16px] font-semibold text-[#1A2B3B] font-aileron ">
           MR SALMAN SAYER
         </h3>
       </div>
@@ -395,7 +395,7 @@ const prevSlide = () => {
         <img src="/assets/start.svg" className="w-6 h-6" />
       </div>
 
-      <p className="text-[15px] text-[#555] leading-relaxed italic">
+      <p className="text-[15px] text-[#555] leading-relaxed italic font-aileron font-medium">
         "I came to Saveetha for tooth replacement but Dr Asvini explained the importance of treating other issues along with it. She was very patient and gentle, I had no pain during treatment and she never made me wait for any treatment and was punctual. Now I am feeling very confident about my smile and I am able to be healthy by eating all food. Very grateful for her to be my dentist"
       </p>
     </div>
@@ -407,7 +407,7 @@ const prevSlide = () => {
           <img src="/assets/BOY.svg" className="w-full h-full object-cover" />
         </div>
 
-        <h3 className="text-[16px] font-semibold text-[#1A2B3B]">
+        <h3 className="text-[16px] font-semibold text-[#1A2B3B] font-aileron ">
          MRS SIVARHUSHANAM
         </h3>
       </div>

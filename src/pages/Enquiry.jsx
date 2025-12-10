@@ -50,12 +50,12 @@ const Enquiry = () => {
   </div>
 
   {/* Name */}
-  <h2 className="text-xl md:text-2xl text-center md:text-left font-bold text-[#1A2B3B]">
+  <h2 className="text-xl  inter-m  md:text-2xl text-center md:text-left font-bold text-[#1A2B3B]">
     Dr V.N.Asvini Devi
   </h2>
 
   {/* Specialization */}
-  <p className="text-gray-600 text-[14px] md:text-[18px] mt-1 md:mt-2 text-center md:text-left leading-tight">
+  <p className="text-gray-600 text-[14px] font-medium inter-m  md:text-[18px] mt-1 md:mt-2 text-center md:text-left leading-loose">
     Prosthodontist and Implantologist
     <br />
     <span className="text-[14px] md:text-[15px]">
@@ -70,7 +70,7 @@ const Enquiry = () => {
       <p className="text-secondary text-[13px] md:text-[14px]">Chennai, India</p>
     </div>
 
-    <div className="flex items-center gap-2 md:gap-3">
+    <div className="flex items-center font-medium inter-m  gap-2 md:gap-3">
       <img src="/assets/email.svg" className="w-4 h-4 md:w-5 md:h-5" alt="email" />
       <p className="text-secondary text-[13px] md:text-[14px]">
          <a
