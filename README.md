@@ -36,7 +36,7 @@ npm run dev
 ## 📄 License
 This project is free to modify and use for personal or professional portfolio purposes.
 
-laptop-view()
+laptop-view(<img width="1905" height="915" alt="Image" src="https://github.com/user-attachments/assets/d46f1183-7bb3-4d67-a5b3-36a7aa5f7afc" />)
 
 mobile-view()
 ---
