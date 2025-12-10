@@ -55,7 +55,7 @@ Below are the **Laptop View** and **Mobile View** screenshots of the project.
 
 ## 📱 Mobile View
 <p align="center">
-  <img src="YOUR-MOBILE-IMAGE-LINK-HERE" alt="Mobile View" width="300">
+ <img width="491" height="786" alt="Image" src="https://github.com/user-attachments/assets/cf8db812-4c10-48b3-8474-436a5e920d9c" />
 </p>
 
 ---
